@@ -13,3 +13,90 @@
     Egg: 6
   solids:
     FoodButterSlice: 1
+
+#Eggs
+
+- type: microwaveMealRecipe
+  id: RecipeScrambledEgg
+  name: scrambled_egg_recipe
+  result: FoodMealScrambledEgg
+  time: 10
+  group: Savory
+  reagents:
+    Egg: 12
+    Milk: 5
+    TableSalt: 2
+
+- type: microwaveMealRecipe
+  id: RecipeFriedEgg
+  name: fried_egg_recipe
+  result: FoodMealFriedegg
+  time: 10
+  group: Savory
+  reagents:
+    Egg: 12
+    TableSalt: 2
+    Blackpepper: 2
+
+- type: microwaveMealRecipe
+  id: RecipeOmelette
+  name: omelette_recipe
+  result: FoodMealOmelette
+  time: 15
+  group: Savory
+  reagents:
+    Egg: 12
+    Milk: 5
+    TableSalt: 2
+    Blackpepper: 2
+  solids:
+    FoodButterSlice: 1
+    FoodCheeseSlice: 1
+
+#Pasta
+
+- type: microwaveMealRecipe
+  id: RecipeMacaroniCheese
+  name: macaroni_cheese_recipe
+  result: FoodMacaroniCheese
+  time: 15
+  group: Pasta
+  reagents:
+    Milk: 5
+  solids:
+    FoodDoughPastaRope: 2
+    FoodBowlBig: 1
+    FoodCheeseSlice: 1
+
+- type: microwaveMealRecipe
+  id: RecipeRavioli
+  name: ravioli_recipe
+  result: FoodMealRavioli
+  time: 15
+  group: Pasta
+  solids:
+    FoodDoughPastaFlat: 1
+    FoodCheeseSlice: 2
+    FoodButterSlice: 2
+
+- type: microwaveMealRecipe
+  id: RecipeBoiledNoodles
+  name: boiled_noodles_recipe
+  result: FoodNoodlesBoiled
+  time: 15
+  group: Pasta
+  reagents:
+    Water: 10
+  solids:
+    FoodDoughPastaRope: 3
+
+- type: microwaveMealRecipe
+  id: RecipeBoiledFettuccine
+  name: boiled_fettuccine_recipe
+  result: FoodNoodlesBoiledFlat
+  time: 15
+  group: Pasta
+  reagents:
+    Water: 10
+  solids:
+    FoodDoughPastaStrip: 3

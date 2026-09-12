@@ -1,0 +1,111 @@
+
+# Pasta Dough
+
+- type: entity
+  parent: FoodBakingBase
+  id: FoodDoughPasta
+  name: pasta dough
+  description: A big ball of dough, perfect for making pasta.
+  components:
+  - type: Item
+    size: Normal
+  - type: FlavorProfile
+    flavors:
+      - dough
+  - type: Sprite
+    sprite: _Persistence14/Objects/Consumable/Food/ingredients.rsi
+    state: pasta-dough
+  - type: SliceableFood
+    count: 3
+    slice: FoodDoughPastaSlice
+  - type: Construction
+    graph: Pasta
+    node: start
+
+- type: entity
+  parent: FoodBakingBase
+  id: FoodDoughPastaSlice
+  name: pasta dough slice
+  description: A slice of pasta dough. Can be rolled out and cooked to make different kinds of pasta.
+  components:
+  - type: Item
+    size: Tiny
+  - type: FlavorProfile
+    flavors:
+      - dough
+  - type: Sprite
+    sprite: _Persistence14/Objects/Consumable/Food/ingredients.rsi
+    state: pasta-dough-slice
+  - type: Tag
+    tags:
+    - Slice
+  - type: Construction
+    graph: DoughRopePasta
+    node: start
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+
+- type: entity
+  parent: FoodBakingBase
+  id: FoodDoughPastaRope
+  name: pasta dough rope
+  description: A thin noodle of pasta dough. Can be cooked into macaroni or spaghetti.
+  components:
+  - type: Item
+    storedRotation: -45
+  - type: FlavorProfile
+    flavors:
+      - dough
+  - type: Sprite
+    sprite: _Persistence14/Objects/Consumable/Food/ingredients.rsi
+    state: pasta-dough-rope
+  - type: Construction
+    graph: DoughRopePasta
+    node: rolled
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+
+- type: entity
+  parent: FoodBakingBase
+  id: FoodDoughPastaFlat
+  name: flat pasta dough
+  description: Flattened pasta dough.
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,1
+  - type: Sprite
+    sprite: _Persistence14/Objects/Consumable/Food/ingredients.rsi
+    state: pasta-dough-flat
+  - type: Construction
+    graph: Pasta
+    node: flat
+  - type: SliceableFood
+    count: 3
+    slice: FoodDoughPastaStrip
+
+- type: entity
+  parent: FoodBakingBase
+  id: FoodDoughPastaStrip
+  name: flat pasta strip
+  description: A long strip of flattened pasta dough.
+  components:
+  - type: Item
+    size: Tiny
+  - type: FlavorProfile
+    flavors:
+      - dough
+  - type: Sprite
+    sprite: _Persistence14/Objects/Consumable/Food/ingredients.rsi
+    state: pasta-dough-strip

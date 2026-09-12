@@ -1,0 +1,13 @@
+- type: constructionGraph
+  id: DoughRopePasta
+  start: start
+  graph:
+  - node: start
+    entity: FoodDoughPastaSlice
+    edges:
+    - to: rolled
+      steps:
+      - tool: Rolling
+        doAfter: 1
+  - node: rolled
+    entity: FoodDoughPastaRope

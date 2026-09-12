@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "pasta dough variations modified from regular dough variations by @SilverSS14 (YouTube)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "pasta-dough"
+    },
+    {
+      "name": "pasta-dough-flat"
+    },
+    {
+      "name": "pasta-dough-rope"
+    },
+    {
+      "name": "pasta-dough-slice"
+    },
+    {
+      "name": "pasta-dough-strip"
+    }
+  ]
+}

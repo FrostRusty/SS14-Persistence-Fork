@@ -1,0 +1,18 @@
+
+# Noodles
+
+- type: entity
+  parent: FoodNoodlesBase
+  id: FoodNoodlesBoiledFlat
+  name: boiled fettuccine
+  description: A plain dish of flat noodles, this needs more ingredients.
+  components:
+  - type: Item
+    storedOffset: 0,-4
+  - type: FlavorProfile
+    flavors:
+      - pasta
+  - type: Sprite
+    sprite: _Persistence14/Objects/Consumable/Food/noodles.rsi
+    state: fettuccine
+# Tastes like pasta.

@@ -5,7 +5,7 @@
   id: ConstructionBag
   name: construction bag
   description: |-
-    A robust bag for construction specialists and engineers alike to carry large amounts of construction stuff. 
+    A robust bag for construction specialists and engineers alike to carry large amounts of construction stuff.
     Magnetises any nearby board, cabling, construction material, LightBulbs or power cell when attached to a belt.
   components:
   - type: MagnetPickup
@@ -13,6 +13,7 @@
     sprite: _NF/Objects/Specific/Engineering/construction_bag.rsi
     layers:
     - state: icon
+      map: ["enumToggleableVisuals.Layer"]
   - type: Clothing
     sprite: _NF/Objects/Specific/Engineering/construction_bag.rsi
     quickEquip: false
@@ -46,6 +47,12 @@
     onActivate: true
     onUse: false
   - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { state: icon-on }
+          False: { state: icon }
 
 # not making crafting recipe for it, seems a lil OP
 
@@ -91,3 +98,9 @@
   - type: Storage
     grid:
     - 0,0,19,9
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { state: icon-on } # use icon-on-bluespace if you want the active indicator to appear on the top of the bag sprite
+          False: { state: icon-bluespace-overlay-unshaded }
